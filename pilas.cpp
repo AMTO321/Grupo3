@@ -1,3 +1,12 @@
+/* Universidad de las Fuerzas Armadas 
+     Ciencias de la Computacion
+        Estructura de Datos
+
+Grupo: 3            Integrantes: Kevin Cabezas, Martin Paz 
+Fecha: 23/10/2026                Erick Sabando, Adrian Toapanta
+        Tema: Pilas
+*/
+
 
 #include<iostream>
 
@@ -17,9 +26,27 @@ public:
     }
 
     void insertar(int valor) {
-        Nodo* nuevo = new Nodo;     // 1. crear el nodo
-        nuevo->dato = valor;        // 2. guardar el dato
-        nuevo->siguiente = tope;    // 3. apuntar al tope actual
-        tope = nuevo;               // 4. el nuevo pasa a ser el tope
+        Nodo* nuevo = new Nodo;   
+        nuevo->dato = valor;       
+        nuevo->siguiente = tope;   
+        tope = nuevo;               
+    }
+
+void imprimir() {
+        if (tope == nullptr) {
+            cout << "La pila esta vacia." << endl;
+            return;
+        }
+
+        Nodo* actual = tope; 
+        cout << "Elementos de la pila:" << endl;
+        
+        while (actual != nullptr) {
+            cout << "Dato: " << actual->dato << endl;
+            actual = actual->siguiente; 
+        }
+        cout << "" << endl;
     }
 };
+
+
