@@ -37,10 +37,10 @@ public:
             return -1;  // valor de error
         }
 
-        Nodo* temp = tope;          // guardamos el nodo del tope
-        int valor = temp->dato;     // guardamos su dato
-        tope = tope->siguiente;     // el tope pasa al siguiente nodo
-        delete temp;                // liberamos la memoria del nodo
+        Nodo* temp = tope;          
+        int valor = temp->dato;     
+        tope = tope->siguiente;    
+        delete temp;                
         return valor;
     }
 
