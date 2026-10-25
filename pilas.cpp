@@ -31,6 +31,18 @@ public:
         nuevo->siguiente = tope;   
         tope = nuevo;               
     }
+        int eliminar() {
+        if (tope == nullptr) {
+            cout << "La pila esta vacia, no hay nada que eliminar." << endl;
+            return -1;  // valor de error
+        }
+
+        Nodo* temp = tope;          // guardamos el nodo del tope
+        int valor = temp->dato;     // guardamos su dato
+        tope = tope->siguiente;     // el tope pasa al siguiente nodo
+        delete temp;                // liberamos la memoria del nodo
+        return valor;
+    }
 
 void imprimir() {
         if (tope == nullptr) {
