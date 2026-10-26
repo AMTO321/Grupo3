@@ -6,6 +6,7 @@ Grupo: 3            Integrantes: Kevin Cabezas, Martin Paz
 Fecha: 00/10/2026                Erick Sabando, Adrian Toapanta
         Tema: Pilas
 */
+//.
 
 // Clase Pila.cpp
   
@@ -82,3 +83,4 @@ bool Pila::buscar(const std::string &cedula) {
   std::cout<<"Persona con la cedula: " << cedula << " no encontrada" << std::endl;
   return false;
 }
+
